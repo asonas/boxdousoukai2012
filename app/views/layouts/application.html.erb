@@ -4,10 +4,13 @@
   <title>Boxdousoukai</title>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=320px; user-scalable=no">
+<script src="jquery-min.js"></script>
 <script>
 $(function(){
+  $('#form_tag').hide();
   $('#form_open').click(function(){
     $('#form_tag').toggle();
+    return false;
   })
 })
 </script>
