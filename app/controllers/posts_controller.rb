@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.find(:all, :order => 'id desc')
     @post = Post.new
 
     respond_to do |format|
