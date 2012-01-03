@@ -42,14 +42,12 @@ margin: 10px;
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Post</th>
+    <th style="text-align:left;">メッセージ</th>
   </tr>
 
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.name %></td>
-    <td><%= post.post %></td>
+    <td><%= post.post %><span style="font-size:x-small">(<%= post.name %>):<%= post.created_at %></span></td>
   </tr>
 <% end %>
 </table>
