@@ -41,18 +41,12 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   <tr>
     <th>Name</th>
     <th>Post</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.name %></td>
     <td><%= post.post %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
